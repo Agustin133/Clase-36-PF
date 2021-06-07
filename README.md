@@ -6,3 +6,26 @@ Al momento del logIn el usuario ingresara su user_name y su password, y a este s
 Tambien agregue la loggers reemplazando todos los mensajes de consola, y en caso de error o warning quedará guardado en un file.err o file.warn dependiendo del caso.
 Le sume tambien un validador en la capa de controller, que me valida el que la información enviada por el body es la que realmente necesito, para esto use la librería Joi.
 
+La ruta del login (api/user/login) dispondrá del siguiente body: 
+{
+    "user": {
+        "username": "user",
+        "password": "Pass123."
+    }
+}
+
+La ruta del register (api/user/register) dispondrá del siguiente body:
+{
+    "user": {
+        "username": "user",
+        "password": "Pass123.",
+        "personal_details": {
+            "first_name": "firstName",
+            "last_name": "lastName",
+            "email": "user@gmail.com",
+            "age": "20",
+            "phone_number": "123345456"
+        }
+    }
+}
+
